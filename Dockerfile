@@ -7,6 +7,7 @@ RUN cd /usr/local/bin && ln -s /opt/node/bin/* .
 RUN npm install -g generator-keystone
 RUN mkdir -p /root/.config/configstore
 RUN chmod g+rwx /root /root/.config /root/.config/configstore
-RUN cd /tmp/data && mkdir my-test-project && cd my-test-project && yo keystone
+RUN cd /tmp/data && mkdir my-test-project && cd my-test-project
+EXPOSE 3000
 WORKDIR /src 
 CMD ["/bin/bash"]
